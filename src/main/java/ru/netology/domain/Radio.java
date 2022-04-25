@@ -9,13 +9,11 @@ public class Radio {
     private int maxVolume = 100;
     private int minVolume;
 
-    public Radio(int currentChannel, int currentVolume, int maxChannel, int minChannel, int maxVolume, int minVolume) {
-        this.currentChannel = currentChannel;
-        this.currentVolume = currentVolume;
+    public Radio(int maxChannel) {
         this.maxChannel = maxChannel;
-        this.minChannel = minChannel;
-        this.maxVolume = maxVolume;
-        this.minVolume = minVolume;
+    }
+
+    public Radio() {
     }
 
     public void increaseVolume() {
