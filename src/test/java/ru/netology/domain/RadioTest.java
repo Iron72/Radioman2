@@ -126,7 +126,7 @@ class RadioTest {
 
     @Test
     public void shouldUserSettingsChannel() {
-        Radio radio = new Radio(9);
+        Radio radio = new Radio(10);
         int expected = 9;
         radio.setCurrentChannel(9);
         int actual = radio.getCurrentChannel();
