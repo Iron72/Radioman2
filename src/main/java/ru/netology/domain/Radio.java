@@ -7,7 +7,7 @@ public class Radio {
     private int quantityChannel = 10;
 
     public Radio(int quantityChannel) {
-        this.quantityChannel=quantityChannel;
+        this.quantityChannel = quantityChannel;
     }
 
     public Radio() {
@@ -41,7 +41,7 @@ public class Radio {
 
 
     public void increaseChannel() {
-        if (currentChannel < quantityChannel- 1) {
+        if (currentChannel < quantityChannel - 1) {
             currentChannel++;
         } else {
             currentChannel = 0;
