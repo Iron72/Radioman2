@@ -4,27 +4,24 @@ public class Radio {
 
     private int currentChannel;
     private int currentVolume;
-    private int maxChannel = 9;
-    private int minChannel;
-    private int maxVolume = 100;
-    private int minVolume;
+    private int quantityChannel = 10;
 
-    public Radio(int currentChannel) {
-        this.currentChannel = currentChannel;
+    public Radio(int quantityChannel) {
+        this.quantityChannel=quantityChannel;
     }
 
     public Radio() {
     }
 
     public void increaseVolume() {
-        if (currentVolume < maxVolume) {
-            currentVolume = currentVolume + 1;
+        if (currentVolume < 100) {
+            currentVolume++;
         }
     }
 
     public void decreaseVolume() {
-        if (currentVolume > minVolume) {
-            currentVolume = currentVolume - 1;
+        if (currentVolume > 0) {
+            currentVolume--;
         }
     }
 
@@ -33,36 +30,37 @@ public class Radio {
     }
 
     public void setCurrentVolume(int currentVolume) {
-        if (currentVolume > maxVolume) {
+        if (currentVolume > 100) {
             return;
         }
-        if (currentVolume < minVolume) {
+        if (currentVolume < 0) {
             return;
         }
         this.currentVolume = currentVolume;
     }
 
+
     public void increaseChannel() {
-        if (currentChannel == maxChannel) {
-            currentChannel = minChannel;
+        if (currentChannel < quantityChannel- 1) {
+            currentChannel++;
         } else {
-            currentChannel = currentChannel + 1;
+            currentChannel = 0;
         }
     }
 
     public void decreaseChannel() {
-        if (currentChannel == minChannel) {
-            currentChannel = maxChannel;
+        if (currentChannel > 0) {
+            currentChannel--;
         } else {
-            currentChannel = currentChannel - 1;
+            currentChannel = quantityChannel - 1;
         }
     }
 
     public void setCurrentChannel(int currentChannel) {
-        if (currentChannel > maxChannel) {
+        if (currentChannel > quantityChannel - 1) {
             return;
         }
-        if (currentChannel < minChannel) {
+        if (currentChannel < 0) {
             return;
         }
         this.currentChannel = currentChannel;
